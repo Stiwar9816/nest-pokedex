@@ -39,9 +39,39 @@ yarn start:dev
 http://localhost:3000/api/v2/seed
 ```
 
+# Ejecutar en producción
+
+1. Crear el archivo **.env.prod**
+
+2. Llenar las varaibles de entorno de producción
+
+3. Construir la nueva imagen de docker con el siguiente comando:
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+4. Para correr nuevamente la imagen de docker lo podemos hacer con este comando si no hemos hecho ningun cambio:
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+
+## Nota
+
+Por defecto, **docker-compose** usa el archivo **.env**, por lo que si tienen el archivo **.env** y lo configuran con sus variables de entorno de producción, bastaría con:
+
+```
+docker-compose -f docker-compose.prod.yaml up --build
+```
+
 ## Stack usado
 
 - MongoDB
 - Nest JS
 - Docker
 - Axios
+
+## 🌎 API en producción
+
+- https://pokedex-nest.up.railway.app/
