@@ -23,8 +23,15 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
+5. Recargar la DB con el SEED en desarrollo
+
+```
+http://localhost:3000/api/v2/seed
+```
+
 ## Stack usado
 
 - MongoDB
 - Nest JS
 - Docker
+- Axios
