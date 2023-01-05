@@ -74,4 +74,4 @@ docker-compose -f docker-compose.prod.yaml up --build
 
 ## 🌎 API en producción
 
-- https://pokedex-nest.up.railway.app/
+- https://pokedex-nest.up.railway.app/api/v2/pokemon
